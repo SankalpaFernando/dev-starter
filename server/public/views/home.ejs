@@ -1,0 +1,53 @@
+
+<head>
+    <meta charset="UTF-8" />
+    <title>EJS Is Fun</title>
+
+    <!-- CSS (load bootstrap from a CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <style>
+     
+    </style>
+  </head>
+<header class="p-3 bg-dark text-white">
+  
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        </a>
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+  
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search...">
+        </form>
+  
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+        <div style="right:2rem;" class="position-absolute top-0 end-0" >
+            <img style="border-radius: 50%;" src=<%= details.user.avatar_url %> alt="@SankalpaFernando" size="50" height="50" width="50" class="avatar-user avatar avatar-small ">
+        </div>
+      </div>
+  </header>
+
+<h1><%= details.user.login %></h1>
+<p id="repo-name" >Repo Not Detected</p>
+<script>
+    const repoComponent=document.getElementById('repo-name');
+    
+        axios.get("/identify-repo").then(data=>{
+            console.log(data)
+        })
+</script>

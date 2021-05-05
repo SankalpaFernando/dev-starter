@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EJS Is Fun</title>
+
+    <!-- CSS (load bootstrap from a CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert alert-danger" style="margin: 0 25%;width:50%" role="alert">
+      <%= error %>
+    </div>
+    <img style="width:25%;margin: 0 37.5%;" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" srcset="">
+    <a href="/git-auth" target="_self" >
+      <button style="width:10%;margin:0 45%;" class="btn btn-success" >Authenticate</button>
+    </a>
+  </body>
+</html>
